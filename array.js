@@ -418,3 +418,4 @@ console.log(results2);  // false
 const numrs=[2,4,6,8];
 const results12 =numrs.every(num => num%2===0);
 console.log(results12);  // true
+
