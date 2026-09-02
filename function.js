@@ -81,3 +81,38 @@ function findLargest(numbers1) {
 return largest;
 }
 console.log(findLargest(numbers1));
+
+//Shorthand in Functions
+function createUser(name, email, age) {
+    return {
+        name,
+        email,
+        age
+    };
+}
+const user = createUser(
+    "Suhana",
+    "suhana@example.com",
+    20
+);
+console.log(user);
+
+//Destructing + Shorthand
+const user06 = {
+    name06: "Suhana",
+    age06: 20
+};
+
+const { name06, age06 } = user06;
+
+const student06 = {
+    name06,
+    age06
+};
+console.log(student06);
+
+//Destructuring	Object → variables	
+// const { name } = person
+//Shorthand	Variables → object properties	
+//{ name }
+
