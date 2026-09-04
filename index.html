@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hello this is Suhana</p>
+    <p id="demo"></p>
+    <p class="message">First Paragraph</p>
+    <p class="message">Second Paragraph</p>
+    <div class="box">
+      <span>Welcome</span>
+    </div>
+    <p class="demo1">Hello suhana</p>
+    <p class="demo2">Hey are you Fine?</p>
+    <p class="demo2">Nice</p>
+
+    <h1 id="title">Hello</h1>
+    <div id="boxes">
+      Hello
+      <span>JavaScript</span>
+    </div>
+    <img id="myImage" src="smiley.gif" />
+    <p id="p2">Hello World!</p>
+    <!--classList Examples-->
+    <div id="BOX" class="BOX active">
+      This is BOX
+      <!--getAttribute()-->
+      <a id="link" href="https://example.com"> Visit </a>
+    </div>
+    <!--setAttribute()-->
+    <!--add new attribute-->
+    <a id="link">Google</a>
+    <!--change existing attribute-->
+    <img id="photo" src="old.jpg" />
+    <!--createElement and append()-->
+    <div id="container"></div>
+    <!--remove()-->
+    <p id="messages">Hello</p>
+    <script>
+      //document
+      console.log(document);
+      //window
+      console.log(window);
+      // Access/find a paragraph Element by ID
+      const myPara = document.getElementById("demo");
+      //Access/find a paragraph Element by Class
+      const message = document.getElementsByClassName("message");
+      //Access/find a paragraph Element by Tag
+      const paragraphs = document.getElementsByTagName("p");
+      //Access a First Element that matches a CSS selector
+      const box = document.querySelector(".box");
+      //Access all Elements that matches a CSS selector
+      const allMessage = document.querySelectorAll(".message");
+
+      //querySelector() Method access and changing content of element
+      const myPar = document.querySelector(".demo1");
+      // Change the content of the Element
+      myPar.innerHTML = "Hello World!";
+      //querySelectorAll() Method access and changing content of element
+      const myItems = document.querySelectorAll(".demo2");
+      // Change the content of the Element
+      myItems[0].innerHTML = "Good";
+      myItems[1].innerHTML = "perfect";
+      // returns a list of all <p> elements with class="demo2"
+      const x = document.querySelectorAll("p.demo2");
+
+      //⭐ textContent vs innerText vs innerHTML
+      console.log(title.textContent);
+      console.log(title.innerText);
+      console.log(boxes.innerHTML);
+
+      //changing an attribute
+      document.getElementById("myImage").src = "landscape.jpg";
+
+      //document.write() used to write directly to the HTML output stream
+      document.write(Date());
+
+      //changing css
+      document.getElementById("p2").style.color = "blue";
+      //classList Example
+      const BOX = document.getElementById("BOX");
+      //add a class
+      BOX.classList.add("active");
+      //remove a class
+      BOX.classList.remove("active");
+      //toggle for button, menus, dark mode.
+      BOX.classList.toggle("active");
+      //contains class or not t/f
+      console.log(BOX.classList.contain("active"));
+      //replace class with one another
+      BOX.classList.replace("old", "new");
+      //getAttribute()
+      //get link
+      const link = document.getElementById("link");
+      console.log(link.getAttribute("href"));
+      //get id
+      console.log(link.getAttribute("id"));
+      //get class
+      console.log(link.getAttribute("class")); //BOX active if doesn't exist return //null
+      //setAttribute()
+      const links = document.getElementById("link");
+      //add new attribute
+      links.setAttribute("href", "https://google.com");
+      //change existing attribute
+      const image = document.getElementById("photo");
+      image.setAttribute("src", "new.jpg");
+      //add an attribute
+      image.setAttribute("alt", "Profile photo");
+
+      //createElement()
+      const paragraph = document.createElement("p");
+      console.log(paragraph); //<p></p> created
+      paragraph.textContent = "Hello JavaScript"; //add text
+      //attached to webpage using append()
+      const container = document.getElementById("container");
+      const paragraph = document.createElement("p");
+      paragraph.textContent = "Hello JavaScript";
+      container.append(paragraph);
+      //append() can add text directly
+      container.append("Hello ", paragraph, "!");
+      //remove()
+      const messages = document.getElementById("messages");
+      messages.remove();
+    </script>
+
+    <!--using events changing style-->
+    <h1 id="id1">My Heading 1</h1>
+    <button
+      type="button"
+      onclick="document.getElementById('id1').style.color = 'red'"
+    >
+      Click Me!
+    </button>
+    <!--How to make an element invisible. Do you want to show the element or not?-->
+    <p id="p1">
+      This is a text. This is a text. This is a text. This is a text.
+    </p>
+    <input
+      type="button"
+      value="hidden text"
+      onclick="document.getElementById('p1').style.visibility = 'hidden'"
+    />
+    <input
+      type="button"
+      value="Show text"
+      onclick="document.getElementById('p1').style.visibility = 'visible'"
+    />
+  </body>
+</html>

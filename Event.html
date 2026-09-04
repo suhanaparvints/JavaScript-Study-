@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--An event is an action or occurrence that happens in the browser, such as a click, key press, mouse movement, or form submission.-->
+    <button>Click Me</button>
+    <!--onclick-->
+<button onclick="sayHello()">Click Me</button>
+
+    <script src="event.js">
+    button.addEventListener("click", function () {
+    console.log("Button clicked!");
+});
+//Event Handlers
+//An event handler is a function or piece of code that executes when a specific event occurs.
+function handleClilck(){
+    console.log("Button Clicked!");
+}
+button.onlick=handleClilck;
+button.onlick= function(){
+    console.log("Clicked!");
+}
+//Event Listeners
+//An event listener waits for a particular event and executes a function when that event occurs.
+button.addEventListene("click",function(){
+    console.log("Button clicked");
+});
+//onclick
+function sayHello(){
+    console.log("HELLO!");
+}
+//addEventListener()
+const button=document.querySelector("button");
+button.addEventListener("click", function(){
+    console.log("Button Clicked!!");
+});
+//multiple listeners
+button.addEventListener("click", function(){
+    console.log("First Button Clicked!!");
+});
+button.addEventListener("click",function(){
+    console.log("Second Button Clicked!!");
+});
+//addEventListener() with named Function
+function sayHeyy(){
+    console.log("Heyy");
+}
+button.addEventListener("click", sayHeyy);
+//removeEventListener()
+// removes an event listener that was previously added.
+button.removeEventListener("click",sayHeyy);
+</script>
+</body>
+</html>
