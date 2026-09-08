@@ -71,7 +71,7 @@ console.log(numbers.findLast(num => num > 20)); //50
 console.log(numbers.findLastIndex(num => num > 20)); //4
 
 //! Extracting & Modifying (Manipulation)
-//slice() - Extracts part of an array without changing the original.
+//! slice() - Extracts part of an array without changing the original.
 const planets= ["Mars", "Jupiter", "Uranus", "Earth"];
 console.log(planets);
 const output = planets.slice(1, 3); // slice(start, end) [end - is not included if we want we can add end or slice(2) ]
@@ -79,7 +79,7 @@ console.log(output);
 const output1 =planets.slice(1);
 console.log(output1);
 
-//splice() - Used to remove, add, or replace elements. And modifies original
+//! splice() - Used to remove, add, or replace elements. And modifies original
 // slice(start(index value), deleteCount(), item1,item2, .... itemN)
 planets.splice(0,2); // removing  (Mars & Jupiter removed) -> [uranus, Earth]
 console.log(planets);
@@ -100,13 +100,13 @@ console.log(results);
 console.log(fruitss);
 
 
-//concat() - Combines Array
+//! concat() - Combines Array
 const grade=["A", "B", "C", "Fail"]
 const marks=[100, 80, 50, 20];
 const total= grade.concat(marks);
 console.log(total);
 
-//join() - Convert an Array into String
+//! join() - Convert an Array into String
 const fruits1 = ["Apple", "Banana", "Mango", "Carrot"];
 const result1 = fruits1.join(", ");
 console.log(result1); //Apple, Banana, Mango, Carrot

@@ -234,6 +234,35 @@ console.log(entries);
 const prson= Object.fromEntries(entries);
 console.log(prson);
 
+//!  Object.groupBy()
+//The Object.groupBy() method groups elements of an object according to string values returned from a callback function.
+// The Object.groupBy() method does not change the original object.
+// Create an Array
+const fruits2 = [
+  {name:"apples", quantity:300},
+  {name:"bananas", quantity:500},
+  {name:"oranges", quantity:200},
+  {name:"kiwi", quantity:150}
+];
+// Callback function to select low volumes 
+function myCallback({ quantity }) {
+  return quantity > 200 ? "ok" : "low";
+}
+// Group by ok and low
+const result2 = Object.groupBy(fruits2, myCallback);
+// Display Results
+let text ="These fruits are Ok:";
+for (let [x,y] of result2.ok.entries()) {
+  text += y.name + " " + y.quantity + " ";
+}
+
+text += "These fruits are low:";
+for (let [x,y] of result2.low.entries()) {
+  text += y.name + " " + y.quantity + " ";
+}
+console.log(text);
+
+
 //! ⭐ What is Object Destructuring?
 // Object destructuring is a JavaScript feature that allows you to extract properties from an object and store them in variables easily.
 //Syntax: const { property1, property2 } = object;

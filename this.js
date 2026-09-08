@@ -36,6 +36,44 @@ user1.greeting();
 // };
 // user.greet(); // usually not "John"
 
+//! this in function
+//this refers to the object that owns the method.
+//! Functions are Objects Methods
+//All JavaScript functions are object methods.
+//A function can be:
+// A method of a JavaScript object
+// A method of the global object
+//this in an Object Method
+const person3={
+  firstName:"John",
+  lastName:"doe",
+  fullName: function(){
+    return this.firstName + "" +this.lastName;
+  }
+};
+person3.fullName();
+
+//this in a Function (Default)
+function myFunction2() {
+  return this;
+}
+//this in a Function (Strict Mode)
+// strict mode does not allow default binding.
+// In strict mode, this used inside a function is undefined.
+"use strict";
+function myFunction3() {
+  return this;
+}
+//this Alone
+let z = this;
+
+//this in Event Handlers
+// In HTML event handlers, this refers to the HTML element that received the event:
+/* <button onclick="this.innerHTML='Clicked!'">Click Me</button>
+<button onclick="this.style.display='none'">
+  Click to Remove Me!
+</button> */
+
 //In constructor function
 //When a function is called with new, this refers to the newly created object.
 function user2(name){
@@ -59,7 +97,7 @@ user5.greet();
 //call, apply, bind
 //explicitly control this.
 
-//! call() - mmediately calls the function and lets you decide what this should refer to.
+//! call() - immediately calls the function and lets you decide what this should refer to.
 //Syntax: functionName.call(thisValue, arg1, arg2, ...);
 //it execute immeadiately
 //call() says: run this function with person as this.

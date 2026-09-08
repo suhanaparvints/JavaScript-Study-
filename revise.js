@@ -40,7 +40,7 @@ console.log(myFunction(4));
 // !rest parameter
 // let x = sum(4,5,6,7,8,9,10); // indefinite no. of arguments treat as an array
 
-//spread syntax
+//! spread operator
 const numbers = [10, 20, 30];
 function addS(a, b, c) {
     return a + b + c;
@@ -57,6 +57,17 @@ function add(a, b, c, d) {
 const arr1 = [10, 20];
 const arr2 = [30, 40];
 console.log(add(...arr1, ...arr2));
+
+//spread operator with object
+const student={
+    name:"Suhana",
+    age:"20"
+};
+const updateUser={
+    ...user,
+    age:20.5
+};
+console.log(updateUser);
 
 //Rest Parameter
 function adds(...numbers1) {

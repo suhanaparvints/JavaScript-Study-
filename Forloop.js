@@ -25,6 +25,7 @@ for (let i = 1; i <= 10; i++) {
   }
 }
 console.log(sum1);
+
 //Count Instead of Sum - counts how many even numbers exist between 1 and 10.
 let Count = 0;
 for (let i = 1; i <= 10; i++) {
@@ -224,6 +225,6 @@ for(const index in fruits12){
 
 const fruits13=["Banana", "Apple", "Orange"];
 fruits13.forEach(function(fruit){
-  console.log(fruits13);
+  console.log(fruit);
 });
 

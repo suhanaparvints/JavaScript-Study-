@@ -154,3 +154,13 @@ student1.changeName("parvin")
 console.log(student1);
 console.log(student2);
 console.log(student3);
+//switch(expression) {
+//   case x:
+//     // code block
+//     break;
+//   case y:
+//     // code block
+//     break;
+//   default:
+//     // code block
+// }
