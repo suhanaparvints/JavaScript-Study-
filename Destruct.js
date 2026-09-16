@@ -30,6 +30,7 @@ const Students = {
 const { names: userName, ages: userAge } = Students;
 console.log(userName);
 console.log(userAge);
+console.log(Students);
 //Default Values
 // What happens if the property doesn't exist? 
 const persons = {

@@ -144,13 +144,13 @@ console.log(fruits3.valueOf() === fruits3);  //true
 const num1 = new Number(10);
 console.log(num1 + 5);  //15
 
-//delete operator - removes the value but does not change the array's length.
+//! delete operator - removes the value but does not change the array's length.
 //instead of delete we use splice()
 const fruits4 = ["Apple", "Banana", "Mango"];
 delete fruits4[1];
 console.log(fruits4);
 
-//Array.isArray() - is used to check whether a value is an array. //Array.isArray(value) // true/false
+//! Array.isArray() - is used to check whether a value is an array. //Array.isArray(value) // true/false
 const fruits0 = ["Apple", "Banana", "Mango"];
 console.log(Array.isArray(fruits0));   //true
 //with string
@@ -163,7 +163,7 @@ const person = {
 };
 console.log(Array.isArray(person));  //false
 
-//!copyWithin()
+//! copyWithin()
 //  is an array method used to copy a portion of an array to another position within the same array. It modifies the original array but does not change its length.
 //array.copyWithin(target, start, end) [target → where to copy the elements, start → where copying starts (put them starting index 1), end → where copying stops (not included)]
 

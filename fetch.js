@@ -71,7 +71,7 @@ const getUser5 = async () => {
   const response5 = await fetch(
     "https://jsonplaceholder.typicode.com/posts/1",
     {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
